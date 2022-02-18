@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body onload="javaScript:showItemDetails()">
+<div id="navbar">
+    <img src="images/icon-close.svg" class="icons" onclick="hideNavbar()">
+    <ul>
+       <li>Collections</li>
+        <li>Men</li>
+        <li> Women </li>
+        <li>About  </li>
+        <li>  Contact </li>
+</div>
+<div id="body">
+    <img src="images/icon-menu.svg"  class="icons" id="menu-icon" onclick="showNavbar()">
+    <h1>sneakers</h1>
+  <div id="cart-image-container"><img src="images/icon-cart.svg" id="cart" onclick="showCartItems()"><span id="notification">1</span></div>
+    <img src="images/image-avatar.png"  class="icons">
+    <div id="image-container">
+         <img src="images/image-product-1.jpg" id="product-images" >
+         <div id="cart-content"><p id="cart-header">Cart</p><hr><br><p id="cart-p">Your cart is Empty</p></div>
+             <img src="images/icon-previous.svg" id="prev" onclick="prevImage();showItemDetails()">
+             <img src="images/icon-next.svg" id="next" onclick="nextImage();showItemDetails()">
+    </div>
+<div id="content">
+<h4>Sneaker Company</h4>
+  <h1>Fall Limited Edition Sneakers</h1>
+
+  <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they'll withstand everything the weather can offer.<p><br>
+<div>
+  <span id="discount-price"></span>
+  <span id="discount"></span>
+  <span id="old-price"></span>
+ </div>
+ <br><br>
+<div id="quantity">
+  <span id="minus" onclick="quantity(-1)"> -</span>
+  <span id="counter"> 0</span>
+  <span id="plus" onclick="quantity(1)">+</span>
+</div>
+<div class="btn" onclick="showNotification();addItemToCart()">   <img src="images/icon-cart.svg">&nbsp&nbsp</p>Add to cart</p></div>
+  </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">ibrahim olawale</a>.
+  </div>
+</body>
+</html>
